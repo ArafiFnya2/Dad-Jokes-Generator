@@ -14,4 +14,11 @@ async function generateJoke() {
 
 document.getElementById('Gen').addEventListener('click', generateJoke)
 
+function copyText() {
+    const text = document.querySelector(".Joke").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+    });
+}
+
+
 generateJoke()
